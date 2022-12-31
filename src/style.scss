@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.bgfireworks {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+section {
+  min-height: 20vh;
+  width: 100%;
+
+  &#n1 {
+    height: 70vh;
+    background-image: linear-gradient(to top, #0f0155, #0f0111);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    h1 {
+      z-index: 2;
+    }
+    div.sub {
+      font-style: italic;
+    }
+  }
+
+  &#n2 {
+    background-color: snow;
+    display: grid;
+    box-sizing: border-box;
+    padding: 50px 20%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+  }
+
+  &#n3 {
+    background-color: #0f0155;
+    box-sizing: border-box;
+    padding: 10% 20%;
+  }
+}
+
+.card {
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+
+  h2 {
+    font-size: 20px;
+    text-align: justify;
+    margin: 0;
+    color: midnightblue;
+  }
+
+  p {
+    color: #1f2f3f;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+  }
+}
+
+.video {
+  content: "";
+  background-image: url("https://picsum.photos/1280/720");
+  background-size: contain;
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    top: 40%;
+    left: 45%;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-right: 50px solid white;
+    transform: rotate(180deg);
+  }
+}

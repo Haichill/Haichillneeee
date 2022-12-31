@@ -1,0 +1,16 @@
+section#n1
+  h1 Happy new year 2023
+  h2 明けましておめでとうございます
+  div.bgfireworks
+  div.bgfireworks
+
+section#n2
+  - items = [{i:'🎆',t: 'Fireworks'}, {i:'🧧',t:'Luck'}, {i:'👘', t:'Kimono'}]
+  - items.each do |item|
+    div.card
+      h2 #{item[:i]} #{item[:t]}
+      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. So I use it here to add more content on the cards.
+      a href="#" Read more...
+  
+section#n3
+  div.video title="It's a fake video"
